@@ -15,7 +15,7 @@ module.exports = function(app) {
     });
   });
 
-  // Delete an Goal by id
+  // Delete a Goal by id
   app.delete("/api/goals/:id", function(req, res) {
     db.Goal.destroy({ where: { id: req.params.id } }).then(function(dbGoal) {
       res.json(dbGoal);

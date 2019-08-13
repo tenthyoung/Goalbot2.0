@@ -245,19 +245,20 @@ $(document).ready(() => {
 
   //================================================================================================================================||
   // Home page to App
-  //================================================================================================================================||
-  $(document).on('click', '#getStartedBtn', () => {
-    $('#home').addClass('hide');
+  // //================================================================================================================================||
+  // $(document).on('click', '#getStartedBtn', () => {
+  //   $('#home').addClass('hide');
 
-    $('#signUpContainer').removeClass('hide');
-  });
+  //   $('#appContainer').removeClass('hide');
+  //   $('#floatingActionButton').removeClass('hide');
 
-  $(document).on('click', '#logInBtn', () => {
-    $('#signUpContainer').addClass('hide');
+  //   // $('#signUpContainer').removeClass('hide');
+  // });
 
-    $('#appContainer').removeClass('hide');
-    $('#floatingActionButton').removeClass('hide');
-  });
+  // $(document).on('click', '#logInBtn', () => {
+  //   $('#signUpContainer').addClass('hide');
+
+  // });
 
 
 })

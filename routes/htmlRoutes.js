@@ -11,14 +11,22 @@ module.exports = function (app) {
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/goal/:id", function (req, res) {
-    db.Goal.findOne({ where: { id: req.params.id } }).then(function (dbGoal) {
-      res.render("example", { //Question about this one!!!!!
-        goal: dbGoal
+  app.get("/goalbot/", function (req, res) {
+    db.Goal.findAll({}).then(function (dbGoals) {
+      res.render("goalbot", {
+        msg: "Welcome!",
+        goals: dbGoals
       });
     });
   });
+
+  // app.get("/goal/:id", function (req, res) {
+  //   db.Goal.findOne({ where: { id: req.params.id } }).then(function (dbGoal) {
+  //     res.render("example", { //Question about this one!!!!!
+  //       goal: dbGoal
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

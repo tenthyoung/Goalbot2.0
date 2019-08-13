@@ -9,7 +9,6 @@ GoalBot is a web application that incentivizes the completion of tasks by allowi
 * Materialize CSS
 * Handlebars JS
 * jQuery
-* Passport JS Authentication
 * MySQL
 * Sequelize ORM
 
