@@ -1,0 +1,216 @@
+<link rel="stylesheet" href="/css/styles.css" type="text/css" />
+
+
+{{!-- App Container --}}
+{{!-- background-image: url('https://images.assetsdelivery.com/compings_v2/lilu330/lilu3301511/lilu330151100006.jpg'); --}}
+
+
+<style>
+    #appContainer {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #avatar {
+        width: 200px;
+        transform: scale(-1, 1);
+    }
+
+    #avatarAndStats {
+        background-image: url('https://image.freepik.com/free-photo/metallic-background_53876-14624.jpg');
+        background-size: cover;
+        background-position-y: bottom;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #statsContainer {
+        color: white;
+        margin-top: 30px;
+    }
+
+    #subtaskContainer {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+{{!-- Entire App Container Start --}}
+<div id="appContainer" class="container">
+    <!--  Avatar & Stats -->
+    <div id="avatarAndStats" class="row">
+        {{!-- Avatar --}}
+        <div class="col s4">
+            <img id="avatar" src="" alt="robot avatar">
+        </div>
+        {{!-- Avatar END --}}
+
+        {{!-- Stats --}}
+        <div id="statsContainer" class="col s7 play-font container">
+            <div class="letter-spacing">
+                NAME: <span id="name">CHRIS STEAD</span>
+            </div>
+            <div class="">
+                LEVEL: <span id="level">14</span>
+            </div>
+            {{!-- --}}
+            Battery Percentage:
+            <div id="experience" class="progress">
+                <div class="determinate" style="width: 0%"></div>
+            </div>
+            Experience:
+            <div id="experience" class="progress">
+                <div class="determinate" style="width: 0%"></div>
+            </div>
+        </div>
+        {{!-- Stats END --}}
+    </div>
+    <!-- Avatar & Stats END -->
+
+    <!-- Menu Buttons & App -->
+    <div id="menuButtons" class="row">
+        <nav class="nav-extended blue-grey darken-2">
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active " href="#test1">Goals</a></li>
+                    <!-- <li class="tab"><a href="#test2">Daily Goal</a></li> -->
+                    <li class="tab"><a href="#test3">Upgrade</a></li>
+                    <li class="tab"><a href="#test4">Motivation</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- To Do List Screen -->
+        <div id="test1" class="col s12">
+            {{!-- <ul id="goal-list" class="collection with-header to-do-list"> --}}
+            <ul id="goal-list" class="collapsible to-do-list">
+                {{#each goals}}
+                {{!-- <li data-id="{{this.id}}" class="collection-item"> --}}
+                <li data-id="{{this.id}}">
+                    <div class="collapsible-header">{{{this.goal}}}</div>
+                    <div class="collapsible-body">
+                        <strong>1st task</strong>: {{ms1}}</p>
+                        <strong>2nd task</strong>: {{ms2}}</p>
+                        <strong>3rd task</strong>: {{ms3}}</p>
+                        <strong>4th task</strong>: {{ms4}}</p>
+                        <strong>5th task</strong>: {{ms5}}</p>
+                        <strong>complete by</strong>: {{completetionDate}}</p>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+
+                    </div>
+
+
+                    {{!-- <div>
+                        <a href="goal/{{this.id}}">{{this.goal}}</a>
+                    </div> --}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <!-- To Do List Screen END -->
+
+        <!-- <div id="test2" class="col s12">Test 2</div> -->
+        <div id="test3" class="col s12"></div>
+        <div id="test4" class="col s12"></div>
+    </div>
+    <!-- Menu Buttons and App END -->
+
+</div>
+<!-- Entire App Container END -->
+
+
+
+<!-- Floating Action Button -->
+<div class="fixed-action-btn">
+    <a id="#new-to-do" class="btn-floating btn-large amber darken-2 tooltipped modal-trigger"
+        href="#goalCreationModal" data-position="left" data-tooltip="New Goal">
+        <i class="large material-icons">mode_edit</i>
+    </a>
+</div>
+<!-- END: Floating Action Button -->
+
+<!-- New Goal Modal -->
+<div id="goalCreationModal" class="modal">
+    <!-- modal-content -->
+    <div class="modal-content container">
+        <!-- Create To Do Modal Content -->
+        <form class="clearfix mb-4" action="POST">
+            <h4 class="letter-spacing center">CREATE GOAL</h4>
+
+            {{!-- Main Goal --}}
+            <div class="row">
+                <div class="form-group input-field">
+                    <label for="goal">Goal</label>
+                    <input type="text" id="goal" class="form-control" aria-describedby="goal"
+                        placeholder="e.g. Run a Marathon">
+                </div>
+            </div>
+            {{!-- Main Goal END --}}
+
+            <!--Subtasks row -->
+            <div class="row">
+                <div id="subtaskContainer" class="col s12">
+                    <ul id="subtasks" class="collection with-header">
+                        <li class="collection-header">
+                            <p>Setting a goal can be hard. Lets break down your goal into 5 manageable
+                                tasks!</p>
+                        </li>
+                        <div id="new-subtasks"></div>
+                        <li id="subtask-input-container" class="collection-item">
+
+                            <div class="form-group input-field col s12">
+                                <label for="ms1">Milestone 1</label>
+                                <textarea class="form-control materialize-textarea" id="ms1" aria-describedby="ms1"
+                                    placeholder=""></textarea>
+                            </div>
+                            <div class="form-group input-field col s12">
+                                <label for="ms2">Milestone 2</label>
+                                <textarea class="form-control materialize-textarea" id="ms2" aria-describedby="ms2"
+                                    placeholder=""></textarea>
+                            </div>
+                            <div class="form-group input-field col s12">
+                                <label for="ms3">Milestone 3</label>
+                                <textarea class="form-control materialize-textarea" id="ms3" aria-describedby="ms3"
+                                    placeholder=""></textarea>
+                            </div>
+                            <div class="form-group input-field col s12">
+                                <label for="ms4">Milestone 4</label>
+                                <textarea class="form-control materialize-textarea" id="ms4" aria-describedby="ms4"
+                                    placeholder=""></textarea>
+                            </div>
+
+                            <div class="form-group input-field col s12">
+                                <label for="ms5">Milestone 5</label>
+                                <textarea class="form-control materialize-textarea" id="ms5" aria-describedby="ms5"
+                                    placeholder=""></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Subtasks Row END -->
+
+
+            <!-- Date Picker -->
+            <div class="form-group input-field col s6 ">
+                <label for="end-date"></label>
+                <input class="form-control datepicker" id="end-date" aria-describedby="end-date"
+                    placeholder="When would you like to reach this goal?"></input type="date">
+            </div>
+            <!-- Date Picker END -->
+
+
+    </div>
+    {{!-- Modal Footer --}}
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+        <a id="submit" href="#!" class="modal-close waves-effect waves-green btn-flat">Create</a>
+    </div>
+    </form>
+    {{!-- Modal Footer END --}}
+</div>
+<!-- New Goal Modal END -->
+
+
+

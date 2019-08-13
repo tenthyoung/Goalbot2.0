@@ -1,0 +1,147 @@
+
+body {
+  font-family: "Play", sans-serif;
+
+
+  /* Enables Sticky Footer START */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  /* Enables Sticky Footer END */
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enables Sticky Footer START */
+main {
+  flex: 1 0 auto;
+}
+/* Enables Sticky Footer END */
+
+.card {
+  border-radius: 20px !important;
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+
+.play-font {
+  font-family: 'Play', sans-serif !important;
+}
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+.quote {
+  font-size: 1.5rem;
+}
+
+#appContainer {
+  width: 100vw;
+}
+
+#avatar {
+  width: 200px;
+
+}
+
+#avatarAndStats {
+  background-image: url('https://image.freepik.com/free-photo/metallic-background_53876-14624.jpg');
+  background-size: cover;
+  background-position-y: bottom;
+  
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#brand-logo {
+  margin-left: 20px;
+}
+
+#collapsibleBody {
+  padding-top: 0;
+}
+
+#goalListContainer {
+  padding: 0;
+  margin: 0;
+}
+
+#jumbotron {
+  background-image: url('https://images.pond5.com/planet-cartoon-space-animation-background-footage-090106999_prevstill.jpeg');
+  background-size: cover;
+}
+
+#jumbotron2 {
+  background-image: url('https://st4.depositphotos.com/17069610/19862/v/600/depositphotos_198625976-stock-video-collection-space-planet-animation-background.jpg');
+  background-size: cover;
+}
+
+#levelUpImage, #upgradeImage {
+  width: 200px;
+}
+
+#levelUpImageContainer, #upgradeImageContainer {
+  /* Orange Energy */
+  background-image: url('https://media0.giphy.com/media/CyeGh5u6xmhgY/giphy.gif');
+  background-repeat: no-repeat;
+  background-position: 45% 35%;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  
+  /* We need to center the avatar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#levelUpModalContentContainer, #upgradeModalContentContainer {
+  /* We need ot center the animation into the middle of the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#levelUpStatsTable, #upgradeStatsTable {
+  width: 300px;
+  border-radius: 10px;
+}
+
+#menuButtons {
+  margin: 0;
+}
+
+#navbarTitle {
+  letter-spacing: 2px;
+}
+
+#statsContainer {
+  color: white;
+  margin-top: 30px;
+}
+
+#subtaskContainer {
+  margin: 0;
+  padding: 0;
+}
+
+#upgradeImageContainer {
+  background-image: url('https://media1.giphy.com/media/jtXRDVzaCPXSynUz7h/giphy.gif?cid=790b76115d0955eb59652f6636631d9a&rid=giphy.gif');
+  background-size: cover;
+}
+
+#upgradeBot1 {
+  margin: 0 auto;
+  width: 300px;
+}

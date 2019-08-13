@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/styles.css">
+  
+
+  {{!------------------------------ MATERIALIZE CSS CDN----------------------- --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  {{!------------------------------ MATERIALIZE ICONS----------------------- --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  {{!------------------------------ GOOGLE FONTS----------------------- --}}
+  <link href="https://fonts.googleapis.com/css?family=Play:400,700&display=swap" rel="stylesheet">
+ 
+  {{!------------------------------ ANIMATIONS ----------------------------}}
+  <link rel="stylesheet" href="styles/animate.css">
+
+
+  <title>GoalBot</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper white">
+      <a id="brand-logo" href="#!" class="brand-logo black-text play-font">
+        <i id="logo-icon" class="material-icons amber-text text-darken-2">check_circle</i><span id="navbarTitle" class="letter-spacing">GOALBOT</span> </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#modalSignUp" class="black-text modal-trigger" data-target="modalSignUp">Sign up</a></li>
+        <li><a href="#modal" class="black-text modal-trigger" data-target="modalLogin">Login</a></li>
+        <li><a href="/logout" class="black-text">Log Out</a></li>
+        <li><a href="/" class="black-text">Play</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#modalSignUp" class="black-text modal-trigger" data-target="modalSignUp">Sign up</a></li>
+    <li><a href="#modalLogin" class="black-text modal-trigger" data-target="modalLogin">Login</a></li>
+    <li><a href="/" class="black-text">Play</a></li>
+  </ul>
+
+  <main>
+    {{{body}}}
+  </main>
+
+
+  <footer class="page-footer blue-grey darken-2">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!"></a>
+      </div>
+    </div>
+  </footer>
+  {{!------------------------------ MATERIALIZE  JAVASCRIPT CDN----------------------- --}}
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../../public/js/index.js"></script>
+  <script src="../../public/js/isAuthenticated.js"></script>
+  {{!-- <script src="../../public/js/login.js"></script> --}}
+  {{!-- <script src="../../public/js/signup.js"></script> --}}
+</body>
+
+</html>
